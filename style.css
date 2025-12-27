@@ -687,6 +687,74 @@ strong {
 }
 
 /*--------------------------------------------------------------------
+-------------------------------ERROR----------------------------------
+----------------------------------------------------------------------*/
+.error-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--abyss-color);
+    background-image: radial-gradient(circle at center, var(--midnight-blue-color) 0%, var(--abyss-color) 100%);
+    color: var(--snow-color);
+    font-family: 'Inter', sans-serif;
+}
+
+.error-container {
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    text-align: center;
+    background-color: var(--midnight-blue-color);
+    border-radius: 20px;
+    border: solid 2px var(--cobalt-blue-color);
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
+    animation: fadeIn 0.8s ease-out;
+}
+
+.error-code {
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0;
+    color: var(--cobalt-blue-color);
+    text-shadow: 0 0 10px var(--cobalt-blue-color);
+}
+
+.error-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 10px;
+    color: rgba(233, 233, 26, 0.767);
+}
+
+.error-description {
+    font-size: 1.2rem;
+    margin: 20px 0 40px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.error-return-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--cobalt-blue-color);
+    color: var(--snow-color);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.error-return-button:hover {
+    background-color: var(--steel-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*--------------------------------------------------------------------
 -------------------------------PROJECTS-------------------------------
 ----------------------------------------------------------------------*/
 
@@ -1330,6 +1398,18 @@ body.no-scroll {
 
     .project-info {
         padding: 10px;
+    }
+
+    .error-code {
+        font-size: 4rem;
+    }
+
+    .error-title {
+        font-size: 1.5rem;
+    }
+
+    .error-container {
+        padding: 25px;
     }
 
     .project-info h2 {
