@@ -56,6 +56,10 @@ hr {
     background-color: var(--cobalt-blue-color);
 }
 
+main {
+    padding-bottom: 50px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -430,18 +434,22 @@ strong {
 }
 
 .legal-header {
-    height: 50px;
-    padding-left: 35px;
+    min-height: 50px;
+    height: auto;
+    padding: 20px 10px 10px 10px;
     color: rgba(233, 233, 26, 0.767);
     font-family: 'Inter', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
+    text-align: center;
 }
 
 .legal-section {
-    margin-top: 50px;
-    margin-left: 30px;
-    margin-right: 20px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    max-width: 800px;
     padding: 20px;
     background-color: var(--midnight-blue-color);
     border-radius: 20px;
@@ -451,6 +459,8 @@ strong {
 
 .return-link {
     display: block;
+    width: fit-content;
+    margin: 20px auto;
     padding: 10px 20px;
     color: var(--snow-color);
     font-family: 'Inter', sans-serif;
@@ -473,23 +483,33 @@ strong {
 }
 
 .mentions-header {
-    height: 50px;
-    padding-left: 35px;
+    min-height: 50px;
+    height: auto;
+    padding: 20px 10px 10px 10px;
     color: rgba(233, 233, 26, 0.767);
     font-family: 'Inter', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
+    text-align: center;
 }
 
 .mentions-section {
-    margin-top: 50px;
-    margin-left: 30px;
-    margin-right: 20px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    max-width: 800px;
     padding: 20px;
     background-color: var(--midnight-blue-color);
     border-radius: 20px;
     border: solid 2px var(--cobalt-blue-color);
     box-shadow: 0 0 4px var(--cobalt-blue-color);
+    text-align: center;
+}
+
+.mentions-section ul {
+    list-style-position: inside;
+    padding: 0;
 }
 
 .mentions-link {
@@ -1066,4 +1086,271 @@ body.no-scroll {
 .project-main {
     flex: 1;
     width: 100%;
+}
+
+/*----------------------RESPONSIVE----------------------*/
+
+/* Tablet / Laptop (1024px) */
+@media screen and (max-width: 1024px) {
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header-nav {
+        gap: 20px;
+    }
+}
+
+/* Tablet (768px) */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .header-nav {
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-bottom: 20px;
+    }
+
+    .banner-text {
+        padding-left: 0;
+        align-items: center;
+        width: 100%;
+    }
+
+    .banner-text h1,
+    .banner-text p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .terminal {
+        width: 100%;
+        height: 350px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .legal-section,
+    .mentions-section {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer p {
+        margin: 0;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .project-header {
+        flex-direction: column;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .back-button {
+        margin-right: 0;
+        font-size: 1.1rem;
+    }
+
+    .project-tech {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project-tech i {
+        font-size: 3rem;
+    }
+
+    .separator {
+        display: none;
+    }
+}
+
+/* Mobile (480px) */
+@media screen and (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner {
+        padding: 30px 15px;
+    }
+
+    .banner h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner-text p {
+        font-size: 1rem;
+    }
+
+    .about {
+        padding: 30px 15px;
+    }
+
+    .terminal-header span {
+        font-size: 0.8rem;
+    }
+
+    .terminal-window p,
+    .terminal-input,
+    .terminal-prompt {
+        font-size: 0.75rem;
+    }
+
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .skill-type {
+        width: 100%;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        padding: 20px;
+    }
+
+    .project-card {
+        width: 95%;
+    }
+
+    .contact {
+        width: 95%;
+    }
+
+    .contact-form {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .link-container {
+        width: 95%;
+    }
+
+    .link-container h1 {
+        font-size: 1rem;
+        word-break: normal;
+    }
+
+    .link-container div {
+        height: auto;
+        min-height: 70px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .mentions-section img {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .legal-header h1,
+    .mentions-header h1 {
+        font-size: 2.2rem;
+        word-break: break-all;
+    }
+
+    .legal-section,
+    .mentions-section {
+        margin-top: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 50px;
+        padding: 15px;
+        max-width: none;
+    }
+
+    .project-info {
+        padding: 10px;
+    }
+
+    .project-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-info p {
+        font-size: 1rem;
+    }
+
+    .project-gallery {
+        column-count: 1;
+    }
+
+    .final-phrase {
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .contact-main p {
+        padding: 0 15px;
+        text-align: center;
+    }
 }
