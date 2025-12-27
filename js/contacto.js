@@ -1,5 +1,5 @@
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault(); 
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
     var formData = new FormData(this);
     var statusMessage = document.getElementById('statusMessage');
@@ -8,49 +8,50 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.text())
-    .then(data => {
-        // --- MOSTRAR EL MENSAJE ---
-        statusMessage.textContent = "¡Mensaje enviado correctamente!";
-        
-        // Importante: Quitamos fade-out por si el usuario dio click muy rápido dos veces
-        statusMessage.classList.remove('hidden', 'fade-out'); 
-        statusMessage.classList.add('status-message');
-        
-        statusMessage.style.color = "var(--cobalt-blue-color)"; 
+        .then(response => {
+            // Verificamos si la respuesta es correcta (status 200-299)
+            if (!response.ok) {
+                // Si hay error (400, 500, etc), lanzamos el texto del error
+                return response.text().then(text => { throw new Error(text) });
+            }
+            return response.text();
+        })
+        .then(data => {
+            // --- ÉXITO ---
+            statusMessage.textContent = data; // Mostramos el mensaje real del PHP
 
-        this.reset(); 
+            statusMessage.classList.remove('hidden', 'fade-out');
+            statusMessage.classList.add('status-message');
+            statusMessage.style.color = "var(--cobalt-blue-color)";
 
-        // --- INICIAR SECUENCIA DE DESAPARICIÓN ---
-        
-        // 1. Esperamos 5 segundos leyendo el mensaje
-        setTimeout(() => {
-            // Añadimos la clase que baja la opacidad a 0
-            statusMessage.classList.add('fade-out');
+            this.reset();
 
-            // 2. Esperamos lo que dura la transición CSS (500ms = 0.5s)
+            // Secuencia de desaparición
             setTimeout(() => {
-                statusMessage.textContent = "";
-                statusMessage.classList.remove('status-message', 'fade-out');
-                statusMessage.classList.add('hidden'); // Ahora sí, display: none
-            }, 500); // Este tiempo debe coincidir con tu CSS (0.5s)
+                statusMessage.classList.add('fade-out');
+                setTimeout(() => {
+                    statusMessage.textContent = "";
+                    statusMessage.classList.remove('status-message', 'fade-out');
+                    statusMessage.classList.add('hidden');
+                }, 500);
+            }, 5000);
+        })
+        .catch(error => {
+            // --- ERROR ---
+            // Mostramos el mensaje de error que viene del PHP (o el de red)
+            statusMessage.textContent = error.message.includes("Error:") ? error.message : "Error de conexión con el servidor.";
 
-        }, 5000);
-    })
-    .catch(error => {
-        // --- ERROR (Misma lógica) ---
-        statusMessage.textContent = "Error al enviar.";
-        statusMessage.classList.remove('hidden', 'fade-out');
-        statusMessage.classList.add('status-message');
-        statusMessage.style.color = "red"; 
-        
-        setTimeout(() => {
-            statusMessage.classList.add('fade-out');
+            statusMessage.classList.remove('hidden', 'fade-out');
+            statusMessage.classList.add('status-message');
+            statusMessage.style.color = "#ff4d4d"; // Un rojo más visible
+
             setTimeout(() => {
-                statusMessage.textContent = "";
-                statusMessage.classList.remove('status-message', 'fade-out');
-                statusMessage.classList.add('hidden');
-            }, 500);
-        }, 5000);
-    });
+                statusMessage.classList.add('fade-out');
+                setTimeout(() => {
+                    statusMessage.textContent = "";
+                    statusMessage.classList.remove('status-message', 'fade-out');
+                    statusMessage.classList.add('hidden');
+                }, 500);
+            }, 5000);
+        });
 });
