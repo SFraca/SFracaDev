@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../js/project.js" defer></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <title>Portfolio Web</title>
+</head>
+<body class="project-body">
+    <header class="project-header">
+        <div>
+            <h1>Portfolio Web</h1>
+            <p>Proyecto personal para mostrar mis habilidades y proyectos</p>    
+        </div>
+        <div class="back-button">
+            <a href="../projects.html"><- Volver</a>
+        </div>
+    </header>
+    <main class="project-main">
+        <div class="content-nav">
+            <button type="button" class="content-button active" onclick="abrirPestana(event, 'info')">Información</button>
+            <button type="button" class="content-button" onclick="abrirPestana(event, 'galeria')">Galería</button>
+            <button type="button" class="content-button" onclick="abrirPestana(event, 'documentacion')">Documentación</button>
+
+            <div class="nav-indicator"></div>
+        </div>
+
+        <div class="content">
+            <div id="info" class="content-item active">
+                <h1>Descripción del proyecto</h1>
+                <p>
+                    Este sitio web es mucho más que un lugar donde mostrar mis proyectos; es mi carta de presentación y la
+                    demostración práctica de mis habilidades. En lugar de utilizar herramientas automáticas o plantillas 
+                    descargadas de internet, tomé la decisión de construir todo este sitio <strong>línea por línea, desde cero</strong>. <br><br>
+                    El objetivo era claro: demostrar que no solo sé utilizar herramientas, sino que comprendo profundamente cómo funciona la web por dentro.
+                </p>
+                <h1>Características</h1>
+                <ul class="project-features">
+                    <li>Desarrollado desde cero</li>
+                    <li>Diseño visual personalizado</li>
+                    <li>Interactividad funcional</li>
+                    <li>Integración de recursos externos</li>
+                </ul>
+                <h1>Tecnologías</h1>
+                <div class="project-tech">
+                    <i class="devicon-html5-plain"></i>
+                    <i class="devicon-css3-plain"></i>
+                    <i class="devicon-javascript-plain"></i>
+                    <i class="devicon-php-plain"></i>
+                    <i class="devicon-git-plain"></i>
+                    <i class="devicon-github-plain"></i>
+                </div>
+
+                <h1>Retos y aprendizajes</h1>
+                <h2>Retos</h2>
+                <p>
+                    El mayor desafío de este proyecto ha sido enfrentarme a un desarrollo libre
+                    sin una planificación estricta previa. Al no contar con una arquitectura de 
+                    archivos definida desde el inicio, tuve que aprender a organizar y reestructurar 
+                    el proyecto a medida que este crecía, adaptándome a las necesidades que surgían
+                    sobre la marcha. <br><br> Además, la implementación de ciertas funcionalidades lógicas 
+                    supuso un reto considerable, obligándome a investigar y probar diferentes soluciones
+                    para lograr que elementos complejos funcionaran correctamente dentro de la web.
+                </p>
+                <h2>Aprendizajes</h2>
+                <p>
+                    Este proceso ha supuesto un salto cualitativo en mis habilidades técnicas, especialmente en 
+                    la comprensión profunda de CSS y el comportamiento de los estilos. He aprendido a crear una 
+                    interacción real entre el usuario y el sistema, implementando un formulario funcional con 
+                    alertas visuales para confirmar el envío de datos. <br><br>Además, he adquirido una visión más profesional 
+                    del desarrollo web al entender que no todo es código: la investigación e integración de los 
+                    apartados legales obligatorios me ha enseñado la importancia del cumplimiento normativo 
+                    en un proyecto real.
+                </p>
+            </div>
+            <div id="galeria" class="content-item">
+                <div class="project-gallery">
+                    <div class="project-gallery-item">
+                        <img src="../projects/images/portfolio/contact-image.webp" alt="Image 1">
+                    </div>
+                    <div class="project-gallery-item">
+                        <img src="../projects/images/portfolio/links-image.webp" alt="Image 2">
+                    </div>
+                    <div class="project-gallery-item">
+                        <img src="../projects/images/portfolio/projects-image.webp" alt="Image 3">
+                    </div>
+                    <div class="project-gallery-item">
+                        <img src="../projects/images/portfolio/start-image.webp" alt="Image 4">
+                    </div>
+                </div>
+            </div>
+            <div id="documentacion" class="content-item">
+                <div class="project-resource">
+                    <h2>Guía de estilos</h2>
+                    <p>
+                        Documentación detallada sobre la paleta de colores, tipografías y elementos 
+                        visuales que definen la identidad visual y consistencia del proyecto.
+                    </p>
+                    <div class="project-resource-link">
+                        <a href="https://fearless-grenadilla-beb.notion.site/Gu-a-de-estilos-2ce3e7d742c380f49a0fcddf365f8aea">Enlace</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-copyright">
+                <span>&copy; <span id="year">2025</span> Samuel Fraca</span>
+                <span class="separator">|</span>
+                <span style="color: #c7d3e0; font-size: 0.8rem;">Code: Apache 2.0</span>
+            </div>
+            <div class="footer-links">
+                <a href="mentions.html">Menciones</a>
+                <a href="legal.html">Aviso legal</a>
+                <a href="privacity.html">Política de privacidad</a>
+            </div>
+        </footer>
+</body>
+</html>

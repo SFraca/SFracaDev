@@ -1,0 +1,21 @@
+{
+    "help" : "<strong>clear</strong>: limpia la terminal<br><strong>sudo</strong>: intenta acceder al sistema<br><strong>about</strong>: muestra información sobre mí<br><strong>whoami</strong>: muestra el usuario actual<br><strong>ls</strong>: lista los archivos y directorios<br><strong>pwd</strong>: muestra el directorio actual<br><strong>socials</strong>: muestra mis redes sociales<br><strong>repo</strong>: muestra el repositorio de GitHub<br><strong>gui</strong>: abre la interfaz gráfica<br><strong>exit</strong>: cierra la página",
+
+    "sudo" : "Buen intento. Acceso denegado :c",
+
+    "about" : "Soy Samuel Fraca, un desarrollador web junior en formación.",
+
+    "whoami" : "Visitor@SfracaDev (acceso limitado)",
+
+    "ls" : "<span class='dir'>Hero_section/</span><span class='dir'>About_section/</span><span class='link'>Projects/</span><span class='link'>Links/</span><span class='file'>cv.pdf</span>",
+    
+    "pwd": "/home/samuel/public_html",
+    
+    "socials": "Encuéntrame en: <a href='https://www.linkedin.com/in/samuel-fraca-serrano-81227a2ba' class='link'>LinkedIn</a> | <a href='https://github.com/SFraca' class='link'>GitHub</a>",
+    
+    "repo": "Este portafolio es Open Source. Ver código: <a href='https://github.com/SFraca/SFracaDev' class='link'>GitHub Repo</a>",
+    
+    "gui": "Abriendo interfaz gráfica... (¡Ya estás en ella! Haz scroll hacia abajo).",
+    
+    "exit": "No puedes salir de la web... pero puedes cerrar la pestaña (por favor no lo hagas)."
+}

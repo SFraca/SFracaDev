@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script src="js/script.js" defer></script>
+
+    <title>Sfraca Dev</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Samuel Fraca</h1>
+        <nav class="header-nav">
+            <a href="index.html" style="color: rgba(233, 233, 26, 0.767);">
+                <h2>Inicio</h2>
+            </a>
+            <a href="projects.html">
+                <h2>Proyectos</h2>
+            </a>
+            <a href="contact.html">
+                <h2>Contacto</h2>
+            </a>
+            <a href="links.html">
+                <h2>Enlaces</h2>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Banner / Hero section -->
+    <section class="banner">
+        <img src="images/profile-pic.png" alt="profile-pic" class="profile-pic">
+        <div class="banner-text">
+            <h1>Pasión por el código, compromiso con el crecimiento.</h1><br>
+            <p>
+                Desarrollador Web Junior en formación.
+                Combino una base técnica sólida con la determinación de aprender
+                y aportar valor desde el primer día. Busco un equipo donde transformar
+                mi curiosidad en soluciones reales.
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <section class="about">
+            <div class="about-text">
+                <h1>Sobre mí</h1>
+                <p>
+                    Hola, soy <strong>Samuel Fraca</strong>. Bienvenido a mi espacio personal.
+                    Aquí podrás explorar mis proyectos, contactarme y conocer mi trayectoria.
+                    Como Desarrollador Web Junior, me apasiona dominar nuevas tecnologías y encontrar
+                    enfoques innovadores para resolver problemas. Me motiva especialmente entender
+                    lo que ocurre 'bajo el capó': la arquitectura de los sistemas y la lógica que hace
+                    que todo funcione.
+                </p>
+            </div>
+            <!--TERMINAL-->
+            <div class="terminal" id="terminal">
+                <div class="title-bar">
+                    <p>Visitor@SfracaDev-Sobre_Mi: ~</p>
+                </div>
+                <div class="history" id="history">
+                </div>
+                <div class="input" id="input">
+                    <p id="prompt">Visitor@SfracaDev-Sobre_Mi: ~$</p>
+                    <input type="text" id="command" placeholder="">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <!-- Stack tecnológico -->
+        <section class="skills">
+            <h1 style="color: var(--snow-color);">Habilidades</h1>
+            <!--Filtros-->
+            <div class="filter-container">
+                <label for="skill-level">Nivel:</label>
+                <select id="skill-level" class="skill-type">
+                    <option value="all">Todos</option>
+                    <option value="ready">Listo</option>
+                    <option value="learning">Aprendiendo</option>
+                </select>
+
+                <label for="skill-type">Tipo:</label>
+                <select id="skill-type" class="skill-type">
+                    <option value="all">Todos</option>
+                    <option value="frontend">Frontend</option>
+                    <option value="backend">Backend</option>
+                    <option value="database">Base de datos</option>
+                    <option value="sysadmin">Administración de sistemas</option>
+                </select>
+            </div>
+
+            <!--Skills-->
+            <div class="skills-container">
+
+                <div class="skill-card" data-status="ready" data-type="frontend">
+                    <i class="devicon-html5-plain colored"></i>
+                    <h2>HTML</h2>
+                    <p>Intermedio</p>
+                </div>
+                <div class="skill-card" data-status="ready" data-type="frontend">
+                    <i class="devicon-css3-plain colored"></i>
+                    <h2>CSS3</h2>
+                    <p>Intermedio</p>
+                </div>
+
+                <div class="skill-card" data-status="learning" data-type="frontend">
+                    <i class="devicon-javascript-plain colored"></i>
+                    <h2>JavaScript</h2>
+                    <p>Básico</p>
+                </div>
+
+                <div class="skill-card" data-status="learning" data-type="backend">
+                    <i class="devicon-php-plain colored"></i>
+                    <h2>PHP</h2>
+                    <p>Básico</p>
+                </div>
+
+                <div class="skill-card" data-status="ready" data-type="backend">
+                    <i class="devicon-java-plain" style="color: var(--snow-color)"></i>
+                    <h2>Java</h2>
+                    <p>Intermedio</p>
+                </div>
+
+                <div class="skill-card" data-status="ready" data-type="database">
+                    <i class="devicon-sqldeveloper-plain" style="color: var(--snow-color)"></i>
+                    <h2>SQL</h2>
+                    <p>Intermedio</p>
+                </div>
+
+                <div class="skill-card" data-status="ready" data-type="sysadmin">
+                    <i class="devicon-linux-plain" style="color: var(--snow-color)"></i>
+                    <h2>Linux / SysAdmin</h2>
+                    <p>Avanzado</p>
+                </div>
+
+                <div class="skill-card" data-status="ready" data-type="sysadmin">
+                    <i class="devicon-windows11-original colored"></i>
+                    <h2>Windows Server</h2>
+                    <p>Avanzado</p>
+                </div>
+
+                <div class="skill-card" data-status="ready" data-type="sysadmin">
+                    <i class="devicon-bash-plain" style="color: var(--snow-color)"></i>
+                    <h2>Bash / Scripting</h2>
+                    <p>Intermedio</p>
+                </div>
+
+                <div class="skill-card" data-status="learning" data-type="backend">
+                    <i class="devicon-python-plain" style="color: var(--snow-color)"></i>
+                    <h2>Python</h2>
+                    <p>Básico</p>
+                </div>
+                <div class="skill-card" data-status="learning" data-type="sysadmin">
+                    <i class="devicon-git-plain colored"></i>
+                    <h2>Git</h2>
+                    <p>Básico</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-copyright">
+                <span>&copy; <span id="year">2025</span> Samuel Fraca</span>
+                <span class="separator">|</span>
+                <span style="color: #c7d3e0; font-size: 0.8rem;">Code: Apache 2.0</span>
+            </div>
+            <div class="footer-links">
+                <a href="mentions.html">Menciones</a>
+                <a href="legal.html">Aviso legal</a>
+                <a href="privacity.html">Política de privacidad</a>
+            </div>
+        </footer>
+</body>
+
+</html>
