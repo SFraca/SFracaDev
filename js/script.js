@@ -23,7 +23,7 @@ async function animacionInicial() {
     await esperar(500);
     anim.innerHTML = "Cargando";
     for (let i = 0; i < 3; i++) {
-        for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 4; j++) {
             await esperar(400);
             anim.innerHTML += ".";
         }
