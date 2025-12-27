@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <script src="js/contacto.js" defer></script>
 </head>
+
 <body class="contact-body">
+
     <!-- Header -->
     <header class="header">
         <h1>Samuel Fraca</h1>
@@ -29,21 +32,27 @@
     </header>
 
     <main class="contact-main">
+
         <h1>Contacto</h1>
         <p>Si tienes alguna pregunta o sugerencia, no dudes en contactarme.</p>
+
         <section class="contact">
             <form action="php/contacto.php" method="POST" class="contact-form" id="contactForm">
                 <label for="name">Nombre</label>
                 <input type="text" placeholder="Nombre" id="name" name="name" required>
+
                 <label for="email">Email</label>
                 <input type="email" placeholder="Email" id="email" name="email" required>
+
                 <label for="message">Mensaje</label>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Escribe tu mensaje" required></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Escribe tu mensaje"
+                    required></textarea>
+
                 <button type="submit">Enviar</button>
                 <p id="statusMessage" class="hidden"></p>
             </form>
-            
         </section>
+
     </main>
 
     <!-- Footer -->
@@ -61,4 +70,5 @@
     </footer>
 
 </body>
+
 </html>

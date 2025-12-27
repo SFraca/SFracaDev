@@ -22,7 +22,7 @@ async function animacionInicial() {
     document.getElementById("input").style.display = "none";
     await esperar(500);
     anim.innerHTML = "Cargando";
-    for(let i = 0; i < 3; i++) {
+    for (let i = 0; i < 3; i++) {
         for (let i = 0; i < 4; i++) {
             await esperar(400);
             anim.innerHTML += ".";
@@ -43,7 +43,7 @@ animacionInicial();
 // Click en la terminal
 document.addEventListener("click", function (event) {
     const clickDentro = cajaTerminal.contains(event.target);
-    
+
     if (!clickDentro) {
         input.blur();
     }
@@ -69,16 +69,16 @@ fetch("js/commands.json")
 // Funcionamiento terminal
 input.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
-        if(input.value.trim() === "") return;
+        if (input.value.trim() === "") return;
 
         const cmd = input.value.trim().toLowerCase();
 
-        if(cmd === "clear") {
+        if (cmd === "clear") {
             history.innerHTML = "";
             input.value = "";
             return;
         }
-        else if(comandosGuardados[cmd]) {
+        else if (comandosGuardados[cmd]) {
             history.innerHTML += "<p>" + prompt + "&nbsp;&nbsp;&nbsp;" + input.value + "</p>";
             history.innerHTML += "<p>" + comandosGuardados[cmd] + "</p>";
         }
@@ -86,15 +86,15 @@ input.addEventListener("keydown", function (event) {
             // Si no existe en el JSON
             history.innerHTML += `<p style="color: red">Command not found: ${cmd}. Try 'help'.</p>`;
         }
-        
+
         input.value = "";
     }
 
     history.scrollTop = history.scrollHeight;
 })
 
-document.addEventListener("DOMContentLoaded", function() {
-    
+document.addEventListener("DOMContentLoaded", function () {
+
     // 1. Seleccionamos los dos menús y las tarjetas
     const statusSelect = document.getElementById("skill-level");
     const typeSelect = document.getElementById("skill-type");
