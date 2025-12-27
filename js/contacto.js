@@ -38,8 +38,10 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         })
         .catch(error => {
             // --- ERROR ---
-            // Mostramos el mensaje de error que viene del PHP (o el de red)
-            statusMessage.textContent = error.message.includes("Error:") ? error.message : "Error de conexión con el servidor.";
+            // Si el error viene de nosotros (tiene "Error:"), lo mostramos. Si no, mensaje genérico.
+            let msg = error.message.includes("Error:") ? error.message : "Error: No se pudo procesar la solicitud.";
+
+            statusMessage.textContent = msg;
 
             statusMessage.classList.remove('hidden', 'fade-out');
             statusMessage.classList.add('status-message');

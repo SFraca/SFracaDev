@@ -655,6 +655,31 @@ strong {
     box-shadow: 0 0 4px var(--cobalt-blue-color);
 }
 
+.privacy-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.privacy-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.privacy-container label {
+    cursor: pointer;
+}
+
+.privacy-container a {
+    color: var(--cobalt-blue-color);
+    text-decoration: underline;
+}
+
 .contact-form button {
     width: 100%;
     padding: 10px;

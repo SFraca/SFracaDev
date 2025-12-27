@@ -3,6 +3,10 @@
 # 1. Establecer la página de inicio por defecto
 DirectoryIndex index.html
 
+# Evitar que se muestren errores de PHP en el navegador
+php_flag display_errors off
+php_value error_reporting 0
+
 # 2. Configuración de páginas de error personalizadas
 ErrorDocument 403 /error/403.html
 ErrorDocument 404 /error/404.html

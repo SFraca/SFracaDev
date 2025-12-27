@@ -1,4 +1,7 @@
 <?php
+// Desactivamos la muestra de errores para que nunca se vea código en el navegador
+ini_set('display_errors', 0);
+error_reporting(0);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Saneamos lo que llega por POST
@@ -6,10 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
     $message = strip_tags(trim($_POST['message'] ?? ''));
 
-    // Validamos que no falte nada
-    if (empty($name) || empty($email) || empty($message)) {
+    // Validamos que no falte nada (incluyendo la política de privacidad)
+    if (empty($name) || empty($email) || empty($message) || !isset($_POST['privacy'])) {
         http_response_code(400);
-        echo "Error: Todos los campos son obligatorios.";
+        echo "Error: Todos los campos son obligatorios, incluyendo la aceptación de la política de privacidad.";
         exit;
     }
 
